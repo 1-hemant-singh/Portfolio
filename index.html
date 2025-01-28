@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <!-- Hero section start -->
+
+  <div class="hero">
+    <style>
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .navbar {
+          display: none;
+        }
+
+        .menu-icon {
+          display: block;
+        }
+
+        .hero {
+          text-align: center;
+        }
+
+        .about .main {
+          flex-direction: column;
+        }
+
+        .about img {
+          width: 100%;
+        }
+
+        .skills-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-info {
+          flex-direction: column;
+        }
+
+        .contact-info .info-item {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+    <nav>
+      <h2 class="logo">BIt<span>NBuild</span></h2>
+      <div id="menu-icon" class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul id="sidebar" class="sidebar">
+        <div class="close-btn" id="close-btn" onclick="hideSidebar()">&times;</div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Acheivements</a></li>
+        <li><a href="#skills-section">Skills</a></li>
+        <li><a href="#contact-section">Contact Me</a></li>
+      </ul>
+      <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Acheivements</a></li>
+        <li><a href="#skills-section">Skills</a></li>
+        <li><a href="#contact-section">Contact Me</a></li>
+      </ul>
+    </nav>
+    <div class="overlay" id="overlay" onclick="hideSidebar()"></div>
+
+    <div class="content">
+      <h4>Hi, my name is</h4>
+      <h1>Mayank <span>Anand</span></h1>
+      <h3>I'am a Web Developer</h3>
+      <div class="newslatter">
+        <form>
+          <input type="email" name="email" id="mail" placeholder="Enter Your Email" />
+          <input type="submit" name="submit" value="Lets Start" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!----- About Section start ---->
+  <section id="about" class="about">
+    <div class="main">
+      <img src="img/background.jpg" alt="" />
+      <div class="about-text">
+        <h2>About <span>Me</span></h2>
+        <h5>Developer <span>& Description</span></h5>
+        <p>
+          My name is Mayank Anand ! I am a student at IIIT Allahabad pursuing B.Tech in IT.
+          I am a ML enthusiast and a Cp lover .I am currently working on a project to build a stock market predictor
+          which will help beginners to put investment and understand the complex technicalities of stocks .
+        </p>
+        <button>Let's Talk</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="title">
+    <h2>Time<span>line</span></h2>
+  </div>
+  <div class="timeline-container">
+    <div class="timeline-item">
+      <div class="timeline-date">2000</div>
+      <div class="timeline-content">
+        <h3>Event 1</h3>
+        <p>Description of the event in this year.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2005</div>
+      <div class="timeline-content">
+        <h3>Event 2</h3>
+        <p>Another important milestone in history.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2010</div>
+      <div class="timeline-content">
+        <h3>Event 3</h3>
+        <p>This year marked another key event.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2020</div>
+      <div class="timeline-content">
+        <h3>Event 4</h3>
+        <p>Significant events that shaped the future.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!------- service section start --->
+  <div id="services" class="service">
+    <div class="title">
+      <h2><span>My</span> Acheivements</h2>
+    </div>
+
+    <div class="carousel-container">
+      <button1 class="prev-btn">&#10094;</button1> <!-- Left Arrow -->
+      <div class="box">
+        <div class="card">
+          <i class="fas fa-bars"></i>
+          <h5>Web Development</h5>
+          <div class="pra">
+            <p>
+              This is about my personal workspace area and will help you know me personally.
+            </p>
+            <p style="text-align: center">
+              <a class="button" href="#">Read More</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="far fa-user"></i>
+          <h5>Machine Learning</h5>
+          <div class="pra">
+            <p>
+              This is the professional section. Here you will get my professional details.
+            </p>
+            <p style="text-align: center">
+              <a class="button" href="#">Read More</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="far fa-user"></i>
+          <h5>Olympiads</h5>
+          <div class="pra">
+            <p>
+              This is the professional section. Here you will get my professional details.
+            </p>
+            <p style="text-align: center">
+              <a class="button" href="#">Read More</a>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <i class="far fa-bell"></i>
+          <h5>Competitive Programming</h5>
+          <div class="pra">
+            <p>
+              Here you will know the details of my CP journey
+              and the insights about it from my point of view.
+            </p>
+            <p style="text-align: center">
+              <a class="button" href="#">Read More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <button1 class="next-btn">&#10095;</button1> <!-- Right Arrow -->
+    </div>
+    <style>
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .navbar {
+          display: none;
+        }
+
+        .menu-icon {
+          display: block;
+        }
+
+        .hero {
+          text-align: center;
+        }
+
+        .about .main {
+          flex-direction: column;
+        }
+
+        .about img {
+          width: 100%;
+        }
+
+        .skills-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-info {
+          flex-direction: column;
+        }
+
+        .contact-info .info-item {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+    <div id="skills-section" class="skills-section">
+      <h2>Ski<span>lls</span></h2>
+      <p>Hover over a skill for description</p>
+      <div class="skills-grid">
+        <div class="skill">
+          <img src="img/c-.png" alt="C">
+          <span class="skill-name">C</span>
+        </div>
+        <div class="skill">
+          <img src="img/java-script.png" alt="JavaScript">
+          <span class="skill-name">JavaScript</span>
+        </div>
+        <div class="skill">
+          <img src="img/python.png" alt="Python">
+          <span class="skill-name">Python</span>
+        </div>
+        <div class="skill">
+          <img src="img/html.png" alt="HTML">
+          <span class="skill-name">HTML</span>
+        </div>
+        <div class="skill">
+          <img src="img/c-logo.png" alt="C++">
+          <span class="skill-name">C++</span>
+        </div>
+        <!-- Add more skill items here -->
+      </div>
+      <div class="skills-grid">
+        <div class="skill">
+          <img src="img/mysql.png" alt="C">
+          <span class="skill-name">C</span>
+        </div>
+        <div class="skill">
+          <img src="img/programmer.png" alt="JavaScript">
+          <span class="skill-name">JavaScript</span>
+        </div>
+        <div class="skill">
+          <img src="img/visual-basic.png" alt="Python">
+          <span class="skill-name">Python</span>
+        </div>
+        <div class="skill">
+          <img src="img/programmer.png" alt="HTML">
+          <span class="skill-name">HTML</span>
+        </div>
+        <div class="skill">
+          <img src="img/c-logo.png" alt="C++">
+          <span class="skill-name">C++</span>
+        </div>
+        <!-- Add more skill items here -->
+      </div>
+      <div class="skills-grid">
+        <div class="skill">
+          <img src="img/c-.png" alt="MySQL">
+          <span class="skill-name">MySQL</span>
+        </div>
+        <div class="skill">
+          <img src="img/java-script.png" alt="JavaScript">
+          <span class="skill-name">JavaScript</span>
+        </div>
+        <div class="skill">
+          <img src="img/python.png" alt="Python">
+          <span class="skill-name">Python</span>
+        </div>
+        <div class="skill">
+          <img src="img/html.png" alt="HTML">
+          <span class="skill-name">HTML</span>
+        </div>
+        <div class="skill">
+          <img src="img/c-logo.png" alt="C++">
+          <span class="skill-name">C++</span>
+        </div>
+        <!-- Add more skill items here -->
+      </div>
+
+
+      </section>
+    </div>
+
+    <!--  Contact me start ------ -->
+    <section id="contact-section" class="contact-section">
+      <div class="container">
+        <h2>Con<span>tact</span></h2>
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <p>8789512138</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>anandmayank698@gmail.com</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Jhalwa,IIIT-A</p>
+          </div>
+        </div>
+        <form class="contact-form" action="http://localhost:3000/send-email" method="POST">
+          <div class="form-group">
+            <input type="text" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+
+      </form>
+  </div>
+  </section>
+
+
+  <!--------- footer start ------->
+  <footer>
+    <p>Mayank <span>Anand</span></p>
+    <p>
+      For more details about me please click on the link below
+      to go to through my socials:
+    </p>
+    <div class="social">
+      <a href="https://github.com/AnandMayank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/mayank-anand-480741231/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/anandmayank2005/"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p class="end">copyright by BitN<span>Build</span></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
